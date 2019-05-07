@@ -1,0 +1,17 @@
+div.about {
+  background-color: #f5f6f7;
+  text-align: center;
+  color: rgb(10, 62, 105);
+  min-height: 100vh;
+  padding-top: 10vh;
+  img {
+    opacity: 1;
+  }
+  & article {
+    padding: 0 20px 20px 20px;
+    color: rgb(10, 62, 105);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}

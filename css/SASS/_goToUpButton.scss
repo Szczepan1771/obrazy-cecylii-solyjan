@@ -1,0 +1,68 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.goToUp {
+  position: fixed;
+  background-color: rgb(10, 62, 105);
+  bottom: 6%;
+  right: 1.5%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 0 3px rgb(25, 132, 219);
+  border-radius: 50%;
+  transition: 0.3s linear;
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+
+  &__i {
+    position: absolute;
+    color: #f5f6f7;
+    line-height: 60px;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s linear;
+    animation: arrowRotate linear infinite 1.2s;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 5px rgb(25, 132, 219);
+    & i {
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      animation: none;
+    }
+  }
+
+  @keyframes arrowRotate {
+    0% {
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -50%);
+    }
+    25% {
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -50%) rotate(12deg);
+    }
+    75% {
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -50%) rotate(-12deg);
+    }
+    100% {
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

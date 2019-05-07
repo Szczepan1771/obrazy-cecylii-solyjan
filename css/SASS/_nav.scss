@@ -1,0 +1,39 @@
+nav {
+  height: 7vh;
+  background-color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  ul {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+
+    li {
+      float: left;
+      width: 25%;
+      font-size: 20px;
+      line-height: calc(7vh);
+      background-color: #414141;
+      border-right: 3px solid rgb(158, 158, 158);
+      color: rgb(202, 202, 202);
+      transition: 0.3s;
+
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(145, 145, 145);
+        color: white;
+      }
+
+      i {
+        margin-right: 10px;
+        font-size: 25px;
+      }
+    }
+  }
+}

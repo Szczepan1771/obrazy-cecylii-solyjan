@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  font-family: "open-sans", "arial";
+  overflow-x: hidden;
+}
+
+a {
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header {
+  position: relative;
+  height: 93vh;
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+header img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  -webkit-animation: img 6s linear infinite;
+          animation: img 6s linear infinite;
+}
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  bottom: 30%;
+  left: 0;
+  font-size: 60px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-animation: text 6s linear infinite;
+          animation: text 6s linear infinite;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  cursor: default;
+  opacity: 0;
+}
+
+@-webkit-keyframes img {
+  1% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+@keyframes img {
+  1% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes text {
+  1% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  1% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.goToUp {
+  position: fixed;
+  background-color: #0a3e69;
+  bottom: 6%;
+  right: 1.5%;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0 0 0 3px #1984db;
+          box-shadow: 0 0 0 3px #1984db;
+  border-radius: 50%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+}
+
+.goToUp__i {
+  position: absolute;
+  color: #f5f6f7;
+  line-height: 60px;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-animation: arrowRotate linear infinite 1.2s;
+          animation: arrowRotate linear infinite 1.2s;
+}
+
+.goToUp:hover {
+  -webkit-box-shadow: 0 0 0 5px #1984db;
+          box-shadow: 0 0 0 5px #1984db;
+}
+
+.goToUp:hover i {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 40px;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes arrowRotate {
+  0% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  25% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%) rotate(12deg);
+            transform: translate(-50%, -50%) rotate(12deg);
+  }
+  75% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%) rotate(-12deg);
+            transform: translate(-50%, -50%) rotate(-12deg);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes arrowRotate {
+  0% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  25% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%) rotate(12deg);
+            transform: translate(-50%, -50%) rotate(12deg);
+  }
+  75% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%) rotate(-12deg);
+            transform: translate(-50%, -50%) rotate(-12deg);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+nav {
+  height: 7vh;
+  background-color: #222;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  margin: auto;
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  float: left;
+  width: 25%;
+  font-size: 20px;
+  line-height: calc(7vh);
+  background-color: #414141;
+  border-right: 3px solid #9e9e9e;
+  color: #cacaca;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav ul li:nth-last-child(1) {
+  border-right: none;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  background-color: #919191;
+  color: white;
+}
+
+nav ul li i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+main {
+  background-color: #ccc;
+  margin-top: 3%;
+}
+
+main div {
+  width: 85%;
+  margin: 0 auto;
+}
+
+div h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding: 25px 0;
+  letter-spacing: 4px;
+}
+
+div div div {
+  position: relative;
+  float: left;
+}
+
+div div div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+div div div p {
+  font-size: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+div.about {
+  background-color: #f5f6f7;
+  text-align: center;
+  color: #0a3e69;
+  min-height: 100vh;
+  padding-top: 10vh;
+}
+
+div.about img {
+  opacity: 1;
+}
+
+div.about article {
+  padding: 0 20px 20px 20px;
+  color: #0a3e69;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.vernissages {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+  min-height: 100vh;
+}
+
+.vernissages div {
+  width: 85%;
+  margin: 40px auto 140px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.vernissages div.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.vernissages div div {
+  width: 20%;
+  height: 25vh;
+  margin: 3% 2.5% 6%;
+  -webkit-box-shadow: 4px 2px 10px 5px black;
+          box-shadow: 4px 2px 10px 5px black;
+}
+
+.vernissages a {
+  border: 2px solid white;
+  color: white;
+  -webkit-box-shadow: 0 0 0 2px #222222, 0 0 0 4px white;
+          box-shadow: 0 0 0 2px #222222, 0 0 0 4px white;
+}
+
+.vernissages a:hover {
+  -webkit-box-shadow: 0 0 0 4px #222222, 0 0 0 6px white;
+          box-shadow: 0 0 0 4px #222222, 0 0 0 6px white;
+}
+
+.gallery {
+  background-color: #f5f6f7;
+  padding: 25px 0 40px;
+  text-align: center;
+  color: #339af0;
+  padding-top: 10vh;
+  min-height: 100vh;
+}
+
+.gallery div {
+  width: 85%;
+  margin: 40px auto 140px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.gallery div.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.gallery div div {
+  width: 20%;
+  height: 30vh;
+  margin: 0 2.5% 8%;
+  -webkit-box-shadow: 4px 2px 10px 5px black;
+          box-shadow: 4px 2px 10px 5px black;
+}
+
+.gallery a {
+  border: 2px solid #339af0;
+  color: #339af0;
+  -webkit-box-shadow: 0 0 0 2px #f5f6f7, 0 0 0 4px #339af0;
+          box-shadow: 0 0 0 2px #f5f6f7, 0 0 0 4px #339af0;
+}
+
+.gallery a:hover {
+  -webkit-box-shadow: 0 0 0 4px #f5f6f7, 0 0 0 6px #339af0;
+          box-shadow: 0 0 0 4px #f5f6f7, 0 0 0 6px #339af0;
+}
+
+.contact {
+  position: relative;
+  background-color: #222222;
+  color: #339af0;
+  height: 30vh;
+}
+
+.contact h2 {
+  position: absolute;
+  font-size: 30px;
+  letter-spacing: 2px;
+  top: 10%;
+  left: 10%;
+}
+
+.contact div {
+  position: absolute;
+  font-size: 20px;
+  letter-spacing: 1px;
+  top: 50%;
+  left: 10%;
+}
+
+.contact div > p {
+  margin-bottom: 10px;
+}
+
+.contact div i {
+  margin-right: 10px;
+}
+
+footer {
+  height: 5vh;
+  background-color: black;
+  line-height: 5vh;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+}
+
+header.gallery-page {
+  height: 30vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header.gallery-page h2.header-gallery {
+  font-size: 40px;
+  line-height: 30vh;
+  color: white;
+  text-transform: uppercase;
+}
+
+main.gallery-page {
+  padding: 0 5%;
+}
+
+main.gallery-page div.gallery-page {
+  margin: 0 auto;
+  background-color: gray;
+  width: 100%;
+  min-height: 90vh;
+}
+
+main.gallery-page div.gallery-page div.galleryElement {
+  float: left;
+  position: relative;
+  height: 30vh;
+  width: 20%;
+  margin: 2.5%;
+  -webkit-box-shadow: 3px 1px 8px 4px black;
+          box-shadow: 3px 1px 8px 4px black;
+}
+
+main.gallery-page div.gallery-page div.galleryElement img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+main.gallery-page div.gallery-page div.galleryElement p {
+  font-size: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+}
+
+.lb-image {
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+
+@media (max-width: 1200px) {
+  .vernissages div div,
+  .gallery div div {
+    height: 22vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

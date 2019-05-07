@@ -1,0 +1,70 @@
+header {
+  position: relative;
+  height: 93vh;
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+
+  & img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 1.2s;
+    animation: img 6s linear infinite;
+  }
+
+  & h1 {
+    position: absolute;
+    width: 100%;
+    bottom: 30%;
+    left: 0;
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: text 6s linear infinite;
+    transition: 1.2s;
+    cursor: default;
+    opacity: 0;
+  }
+}
+
+@keyframes img {
+  1% {
+    opacity: 0;
+  }
+
+  13% {
+    opacity: 1;
+  }
+
+  87% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  1% {
+    opacity: 0;
+  }
+
+  13% {
+    opacity: 1;
+  }
+
+  87% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  font-family: "open-sans", "arial";
+  overflow-x: hidden;
+}
+
+// przycisk do przejscia na podstronę
+a {
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+@import "./header";
+@import "./goToUpButton";
+@import "./nav";
+@import "./section";
+@import "./styleGallery";
+
+@media (max-width: 1200px) {
+  .vernissages,
+  .gallery {
+    div {
+      div {
+        height: 22vh;
+      }
+    }
+  }
+}
